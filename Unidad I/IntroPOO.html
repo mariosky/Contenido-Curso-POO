@@ -1,7 +1,6 @@
-<h3>Elementos del Modelo Orientado a Objetos</h3>
-
+<h3>Paradigmas de Programación</h3>
 <p>
-  En esta sección hablaremos del paradigma de programación <em>Orientado a Objetos</em>. La primera pregunta que nos podríamos hacer al escuchar esto es: ¿Y que es una paradigma de programación?. Bueno, los lenguajes de programación son diseñados para permitir a los programadores seguir cierto enfoque particular o filosofía para diseñar los programas, a esto le llamamos paradigma. Los paradigmas difieren unos de otros en los conceptos y la <em>forma de abstraer</em> los elementos involucrados en un problema, así como en los pasos que integran su solución. <a href="https://es.wikipedia.org/wiki/Paradigma_de_programaci%C3%B3n">1</a>. No te preocupes si por el momento esta última oración no tiene el menor sentido, quedará claro en un momento. Vamos por partes. ¿A que nos refermios cuando decimos: distintas formas de abstraer?. Abstraer se refiere a <em>ignorar aquello que no es relevante, para concentrarnos en lo escencial</em>. Esto es algo importante ya que los lenguajes de programación nos permiten ignorar detalles para permitirnos solucionar más fácilmente los problemas que queremos resolver. La historia de los lenguajes de programación va de aquellos en los que no había nada de abstracción a nuevos lenguajes con distintas y poderosas formas de abstracción.
+En esta sección hablaremos del paradigma de programación <em>Orientado a Objetos</em>. La primera pregunta que nos podríamos hacer al escuchar esto es: ¿Y que es una paradigma de programación?. Bueno, los lenguajes de programación son diseñados para permitir a los programadores seguir cierto enfoque particular o filosofía para diseñar los programas, a esto le llamamos paradigma. Los paradigmas difieren unos de otros en los conceptos y la <em>forma de abstraer</em> los elementos involucrados en un problema, así como en los pasos que integran su solución. <a href="https://es.wikipedia.org/wiki/Paradigma_de_programaci%C3%B3n">1</a>. No te preocupes si por el momento esta última oración no tiene el menor sentido, quedará claro en un momento. Vamos por partes. ¿A que nos refermios cuando decimos: distintas formas de abstraer?. Abstraer se refiere a <em>ignorar aquello que no es relevante, para concentrarnos en lo escencial</em>. Esto es algo importante ya que los lenguajes de programación nos permiten ignorar detalles para permitirnos solucionar más fácilmente los problemas que queremos resolver. La historia de los lenguajes de programación va de aquellos en los que no había nada de abstracción a nuevos lenguajes con distintas y poderosas formas de abstracción.
 </p>
 <p>
 Veamos pues una pequeña historia de los lenguajes de programación, enfocándonos en sus mecanismos de abstracción: eso que nos permite alejarnos de los detalles (instucciones a nivel máquina, manejo de la memoria, interrupciones del sistema operativo, etc.) para enfocarnos en los elementos del problema y la solución.
@@ -9,27 +8,105 @@ Veamos pues una pequeña historia de los lenguajes de programación, enfocándon
 <h3>Cero Abstracción</h3>
 <p>
 A finales de los años 40 se crearon las primeras computadoras electónicas. Al principio podríamos decir que las computadoras no eran programables, se construían con propósito específico. Para hacer alguna modificación a su funcionamento se debía rediseñar la computadora y ensamblarla para poder cumplir con el nuevo propósito. Fué un gran avance que las computadoras fueran de propósito general, esto dió origen a los lenguajes de programación. La programación de las primeras computadoras de propósito general  se hacía en lenguaje máquina lo cual era bastante difícil y propenso a errores. Los programas en ese entonces estaban destinados a realizar tareas muy específicas, (por ejemplo: diseñar los primeros aviones) no había interfaces gráficas de usuario, ni siquiera el ratón, teclado o monitor. Programar era pensar en la solución a un problema para después tener la tarea adicional de traducir dicha solución al lenguaje de la máquina.
-
-
+</p>
+<h3>Alto Nivel</h3>
 <p>
 Antes de existir los lenguajes de <en>alto nivel</en> se programaba en     lenguaje ensamblador cuyas instrucciones son básicamente las mismas    instrucciones del microprocesador que ejecutará el programa. Esto como vemos es cero nivel de abstracción, ya que no nos aleja nada del lenguaje máquina. El primer destello de abstracción en estos lenguajes es el uso de macros. Los macros son básicamente un estilo de <a href="https://es.wikipedia.org/wiki/Cortar,_copiar_y_pegar">copy-paste</a>.Los macros permiten asignar un nombre mnemónico a un bloque de código para que cada que se escriba dicho mnemónico, éste se reemplace por el bloque de líneas especificado.Esto ya permite a los programadores ignorar el detalle de dichas líneas. Los lenguajes se empezaron a llamar de <en>alto nivel</en> cuando las instrucciones eran independientes del microprocesador, estos lenguajes empezaron a utilizar programas llamados compiladores que se daban a la tarea de traducir el lenguaje de programación a las instrucciones de lenguaje ensamblador. Empezaron así las generaciones de lenguajes de programación, vamos  a hacer un repaso rápido en esta historia para ver donde se ubican los lenguajes orientados a objetos.
 </p>
+<h3>Generaciones</h3>
+<p>
+La primera generación de los lenguajes de programación (1954-1958) incluía a lenguajes como FORTRAN I y ALGOL 58, estos lenguajes permitian a los     programadores escribir expresiones matemáticas. En ese entonces no le llamaban lenguaje de programación a FORTRAN, <a href="https://www.fortran.com/FortranForTheIBM704.pdf">el manual</a> tenía como titulo  "Sistema Automático de Codificación para el IBM 704 EDPM". Lo de automático se refería a que uno no tenía que escribir en lenguaje máquina. <a href="http://www.paulgraham.com/history.html">Paul Grahm</a> comenta que los inventores de FORTRAN no esperaban que el lenguaje se utilizara en otras computadoras o incluso que una computadora tuviera contara con varios lenguajes para programarla. Todavía había una dependencia lenguaje-máquina. Los programas de FORTRAN eran planos, no había subrutinas, el flujo se realizaba a través de saltos al número de línea en el código, se programaba con tarjetas perforadas. La abstracción entonces estaba en las instrucciones mismas, el poder utilizar palabras del lenguaje como DO, GO TO, IF para expresar los algoritmos en lugar del lenguaje máquina.</p>
+<p>
+Para la segunda generación (1959-1961) la computación se empieza a ser de uso comercial, no solo para aplicaciones militares o científicas. A esta generación pertence COBOL el cual permite gestionar los archivos de datos y se usa en aplicaciones empresariales. Fué diseñado desde un principio para ser un lenguaje estándar el cual permitiera reducir los costos de conversión de programas de una computadora a otra. El paradigma entonces era el decirle a la máquina que hacer: lee los registros de estos empleados, después ordénalos e imprime un reporte. También surge un lenguaje muy innovador: Lisp (de List Processing) diseñado por John McCarthy. Este es el primer lenguaje en el que los programas se escriben utilizando una estructura (listas) para escribir el programa, este es el paradigma de Lisp.</p>
+<p>
+En la tercera generación (1962-1970) el costo de las computadoras se redujo dramáticamente con lo cual el alcance de la computación también se incrementó. Con los nuevos problemas vino la necesidad de tener nuevos tipos de datos. Los lenguajes de la epoca como ALGOL 60 y Pascal incluyeron mecanismos que permitían  a los programadores definir sus propios tipos de datos. De nuevo estos avances alejaron aún más a los programadores del lenguaje máquina y les acercó más al lenguaje utilizado en los problemas. En 1967 surge en Noruega el lenguaje Simula 67, diseñado por Ole-Johan Dahl y Kristen Nygaard. Este lenguaje permitía definir nuevos tipos de datos mediante el uso de clases permitiendo además la herencia. Simula es considerado como el primer lenguaje orientado a objetos. El mecanismo de abstracción en este lenguaje son las clases, que permiten definir nuevos tipos de objetos.</p>
+<p>
+El boom de los lenguajes orientados a objetos y de su paradigma se dió en la decada de los ochenta, con lenguajes como SmallTalk 80 y C++. Durante esta etapa el paradigma orientado a objetos se consolida y refina.  Para los años noventa se consolidan los ambientes integrados de desarrollo con FrameWorks como Delphi, .net, J2EE y Visual Studio. Recientemente los lenguajes para scripts han tenido auge con lenguajes como TCL, Perl, JavaScript, Python, Ruby, Scheme o Clojure.
+</p>
+<h3> Programación Orientada a Objetos</h3>
+<p>
+El paradigma de la programación orientada a objetos consiste en programar utilizando colecciones de objetos que cooperan entre sí, los cuales se definen empleando clases. Las clases pueden extenderse heredando estructura y funcionalidad mediante relaciones jerarquicas de herencia.</p>
+<p>
+Para entender mejor esta definición veamos un ejemplo utilizando el lenguaje C#.</p>
+<p>
+En los cursos anteriores de programación posiblemente haz empleado tipos de datos básicos: por ejemplo (<code>int</code>),(<code>decimal</code>) o (<code>string</code>), estos tipos de datos nos permiten representar objetos sencillos por ejemplo los enteros nos podrían servir para representar velocidad, número de intentos, vidas en un video juego, goles etc., las cadenas por otro lado nos permiten representar nombres de usuario, titulo, correo electronico, etc. Estos tipos de datos básicos, no permiten representar de manera sencilla otro tipo de objetos, por ejemplo: Usuarios, Alumnos, Articulos, Equipos, Facturas, etc. Los lenguajes orientados a objetos nos permiten definir nuevos tipos de objetos, para esto utilizamos clases.</p>
+<p>
+Como ejemplo haremos un pequeño programa que despliegue en la terminal la información más relevante de dos usuarios. No es importante en este momento entender todo lo que interviene en el programa ya que nos enfocaremos en el paradigma. El primer paso es definir los tipos de objetos que intervendrán en nuestro programa. En este caso solo habrá objetos de tipo Usuario. Definamos pues esta clase:
+</p>
+<p>
+using System;
+
+class Usuario
+{
+  public string nombre;
+  public string correoe;
+
+  public void print()
+  {
+    Console.WriteLine(nombre+","+correoe);
+  }
+}
+</p>
+<p>
+  Una vez definidos los tipos de objetos, podemos resolver el problema planteado. Vamos creando dos objetos tipo Alumno:
+</p>
+<code>
+  class Program
+  {
+   static void Main(){
+   //Creamos dos objetos
+   Usuario usr_1 = new Usuario();
+   Usuario usr_2 = new Usuario();
+   //Los inicializamos
+   usr_1.nombre = 'Ana';
+   usr_1.correoe = 'anita@gmail.com';
+   usr_2.nombre = 'Paco';
+   usr_2.correoe = 'pete@gmail.com';
+   //Les pedimos que se impriman en la terminal
+   user_1.print();
+   user_2.print();
+   //Hacemos una pausa,
+   //por si estamos ejecutando el programa desde VisualStudio
+   Console.ReadKey();
+  }
+
+  }
+</code>
 
 <p>
-    La primera generación de los lenguajes de programación (1954-1958) incluía
-    a lenguajes como FORTRAN I y ALGOL 58, estos lenguajes permitian a los
-    programadores escribir expresiones matemáticas.
+  Como vemos en este programa intervienen dos objetos directamente relacionados con nuestro problema: los usuarios. Los objetos representan a dos usuarios del mundo real, Ana y Paco. Primero definimos aquellas caracteristicas escenciales de los Usuarios, sus propiedades: nombre y correo electrónico y su comportamiento imprimirse en la terminal. El crear los objetos es similar a la declaración de un tipo de dato básico, se indica el tipo y el identificador,en este caso el tipo es Usuario y el identificador usr_n. Vemos que los objetos son datos comuestos y sus atributos y métodos se acceden mediante un punto. Por ejemplo user_1.nombre.  Hay otros elementos en este programa, por ejemplo la clase Console, la cual nos permite mediante su método WriteLine() escribir una linea en la consola. Por otro lado el método ReadKey() captura una tecla.
+</p>
+<p>
+  Un programa orientado a objetos también utiliza herencia para extender las clases, por ejemplo podriamos tener otro tipo de usuarios, aquellos que se han registrado a un sitio web. en el paradigma orientado a objetos creamos este nuevo tipo extendiendo a la clase Usuario de la siguiente manera:
+</p>
+<p>
+  using System;
+
+  class Usuario
+  {
+    public string nombre;
+    public string correoe;
+
+    public void print()
+    {
+      Console.WriteLine(nombre+","+correoe);
+    }
+  }
+
+ class UsuarioRegistrado : Usuario
+  {
+  public string id_registro;
+
+  // Después lo veremos.
+  }
 </p>
 
 <p>
-    La segunda generación fué muy exitosa, digamos que es cuando la computación
-    se empieza a hacer comercial, no solo para aplicaciones militares o
-    científicas. A esta generación pertence COBOL, el cual permite gestionar los
-    archivos de datos y se usa en aplicaciones empresariales incluso en la actualidad.
-    También surge un lenguaje muy innovador: Lisp, el cual
+  La nueva clase UsuarioRegistrado cuenta con los atributos nombre y correoe, de manera implicita pues la clase hereda de Usuario. La relación de herencia en C# se especifíca con los dos puntos UsuarioRegistrado : Usuario.
 </p>
-
-<h3> El modelo Orientado a Objetos </h3>
-
-
-<p>   </p>
+<p>
+Este programa es ilustrativo para resaltar los elementos del paradigma elementales del paradigma orientado a objetos.
+</p>
+<p>
+  Hablar sobre los bloques.
+</p>
