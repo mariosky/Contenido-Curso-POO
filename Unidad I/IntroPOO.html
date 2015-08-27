@@ -25,7 +25,7 @@ El boom de los lenguajes orientados a objetos y de su paradigma se dió en la de
 </p>
 <h3> Programación Orientada a Objetos</h3>
 <p>
-El paradigma de la programación orientada a objetos consiste en programar utilizando colecciones de objetos que cooperan entre sí, los cuales se definen empleando clases. Las clases pueden extenderse heredando estructura y funcionalidad mediante relaciones jerarquicas de herencia.</p>
+El paradigma de la programación orientada a objetos consiste en programar utilizando colecciones de objetos que cooperan entre sí, los cuales se definen empleando clases. Las clases encapsulan a los atributos y métodos que definen al tipo de objeto. Las clases pueden extenderse heredando la definición mediante relaciones jerarquicas de herencia.</p>
 <p>
 Para entender mejor esta definición veamos un ejemplo utilizando el lenguaje C#.</p>
 <p>
@@ -41,7 +41,7 @@ class Usuario
   public string nombre;
   public string correoe;
 
-  public void print()
+  public void imprimir()
   {
     Console.WriteLine(nombre+","+correoe);
   }
@@ -63,8 +63,8 @@ class Usuario
    usr_2.nombre = 'Paco';
    usr_2.correoe = 'pete@gmail.com';
    //Les pedimos que se impriman en la terminal
-   user_1.print();
-   user_2.print();
+   user_1.imprimir();
+   user_2.imprimir();
    //Hacemos una pausa,
    //por si estamos ejecutando el programa desde VisualStudio
    Console.ReadKey();
@@ -87,7 +87,7 @@ class Usuario
     public string nombre;
     public string correoe;
 
-    public void print()
+    public void imprimir()
     {
       Console.WriteLine(nombre+","+correoe);
     }
@@ -102,11 +102,46 @@ class Usuario
 </p>
 
 <p>
-  La nueva clase UsuarioRegistrado cuenta con los atributos nombre y correoe, de manera implicita pues la clase hereda de Usuario. La relación de herencia en C# se especifíca con los dos puntos UsuarioRegistrado : Usuario.
+La nueva clase UsuarioRegistrado cuenta con los atributos nombre y correoe, de manera implicita pues la clase hereda de Usuario. La relación de herencia en C# se especifíca con los dos puntos UsuarioRegistrado : Usuario.
 </p>
 <p>
-Este programa es ilustrativo para resaltar los elementos del paradigma elementales del paradigma orientado a objetos.
+Este programa es ilustrativo para resaltar los elementos del paradigma elementales del paradigma orientado a objetos. Volveremos a este programa para cuando necesitemos ilustrar elementos adicionales del paradigma.
+</p>
+
+<h3>Conceptos del Paradigma Orientado a Objetos</h3>
+<h4>Abstracción</h4>
+<p>
+Como vimos anteriormente la abstracción es una descripción especial simplificada de un sistema que hace énfasis en ciertos rasgos y suprime otros. En los lenguajes orientados a objetos las clases nos sirven como mecanismos de abstracción pues con ellas definimos las características esenciales de un objeto, aquello que lo distingue de otra clase de objetos proveyéndolo de fronteras conceptuales de definición muy claras y dentro de una perspectiva funcional.
+ </p>
+
+<p>
+Una abstracción se centra en la vista externa de los objetos, por lo que también nos sirve para separar el comportamiento escenciales del objeto de su implementación. En el programa anterior para la abstracción Alumno solo nos debemos enfocar en sus propiedades y comportamiento de imprimir() sin importar como este comportamiento es implementado. Nos dá lo mismo si se utiliza Console.WriteLine() u otra librería esto queda fuera de nuestra visión.</p>
+<p>
+La abstracción es el paso de un objeto del mundo real a un objeto abstracto o a la información definida una clase u objeto que sirva como componente de la solución.
+ </p>
+<h4>Encapsulamiento</h4>
+<p>
+El Encapsulamiento es el proceso mediante el cual se ocultan todos los detalles de un objeto que no contribuyen a sus características esenciales de uso, es decir, este principio nos indica que debemos ocultar la complejidad constructiva de la implementación innecesaria para que otros objetos lo usen o se comuniquen con él sobre todo por motivos de seguridad y de integridad.
+ </p>
+<p>
+  Ejemplo: private.
+</p>
+<h4>Herencia</h4>
+<p>
+  Es compartir atributos y operaciones entre clases tomando como base una relación jerárquica.
 </p>
 <p>
-  Hablar sobre los bloques.
+  Todas las subclases poseen o heredan todas y cada una de las propiedades de su superclase y añaden, además, sus propiedades exclusivas. No es necesario repetir las propiedades de las superclases en cada subclase.
+</p>
+<h4>Polimorfismo</h4>
+<p>
+Significa que una operación puede comportarse  de modos distintos en distintas clases teniendo el mismo nombre de método.
+</p>
+<h4>Clase</h4>
+<p>
+Una clase contienen el molde (estructura, esquema) a partir del cual se crean los objetos que pertenecen a ella y el código que debe ejecutarse cada vez que un objeto de la clase recibe un mensaje. Una clase contiene la  descripción de las características comunes de todos los objetos que pertenecen a ella: la especificación del comportamiento, la definición de la estructura interna y la implementación de los métodos.
+</p>
+<h4>Instancia</h4>
+<p>
+Se dice que cada objeto es una instancia de su clase. Toda instancia de la clase posee su propio valor para cada uno de los atributos pero comparte los nombres de los atributos y las operaciones con las demás instancias de la clase. Los objetos de un sistema se comunican entre sí mediante mensajes. Todo objeto contiene una referencia implícita a su propia clase.
 </p>
