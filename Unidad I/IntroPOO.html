@@ -111,14 +111,16 @@ Este programa es ilustrativo para resaltar los elementos del paradigma elemental
 <h3>Conceptos del Paradigma Orientado a Objetos</h3>
 <h4>Abstracción</h4>
 <p>
-Como vimos anteriormente la abstracción es una descripción especial simplificada de un sistema que hace énfasis en ciertos rasgos y suprime otros. En los lenguajes orientados a objetos las clases nos sirven como mecanismos de abstracción pues con ellas definimos las características esenciales de un objeto, aquello que lo distingue de otra clase de objetos proveyéndolo de fronteras conceptuales de definición muy claras y dentro de una perspectiva funcional.
+Como vimos anteriormente la abstracción es una descripción especial simplificada de un sistema que hace énfasis en ciertos rasgos y suprime otros. En los lenguajes orientados a objetos las clases nos sirven como mecanismos de abstracción pues con ellas definimos las características esenciales de un tipo de objetos. Nos permite distinguir entre una y otra clase de objetos, proveyéndolos de fronteras conceptuales claras.
  </p>
+<p>
+Una abstracción se centra en la vista externa de los objetos, por lo que también nos sirve para separar el comportamiento escencial del objeto de su implementación. En el programa anterior para la abstracción Alumno es mejor  enfocarnos en sus propiedades y comportamiento, por ejemplo al hablar del método imprimir() nos nos debe importar como este comportamiento será implementado. Nos dá lo mismo si se utilizará Console.WriteLine() u otra librería, esto debe quedar fuera de nuestra visión al momento de definir la abstracción.</p>
+<p>
+La abstracción nos permite pasar un objeto del mundo real a un objeto abstracto que en el caso del paradigma orientado a objetos, esto lo definiremos en las clases.
+ </p>
+<h4>Tipos de Abstracciones</h4>
 
-<p>
-Una abstracción se centra en la vista externa de los objetos, por lo que también nos sirve para separar el comportamiento escenciales del objeto de su implementación. En el programa anterior para la abstracción Alumno solo nos debemos enfocar en sus propiedades y comportamiento de imprimir() sin importar como este comportamiento es implementado. Nos dá lo mismo si se utiliza Console.WriteLine() u otra librería esto queda fuera de nuestra visión.</p>
-<p>
-La abstracción es el paso de un objeto del mundo real a un objeto abstracto o a la información definida una clase u objeto que sirva como componente de la solución.
- </p>
+
 <h4>Encapsulamiento</h4>
 <p>
 El Encapsulamiento es el proceso mediante el cual se ocultan todos los detalles de un objeto que no contribuyen a sus características esenciales de uso, es decir, este principio nos indica que debemos ocultar la complejidad constructiva de la implementación innecesaria para que otros objetos lo usen o se comuniquen con él sobre todo por motivos de seguridad y de integridad.
@@ -137,11 +139,13 @@ El Encapsulamiento es el proceso mediante el cual se ocultan todos los detalles 
 <p>
 Significa que una operación puede comportarse  de modos distintos en distintas clases teniendo el mismo nombre de método.
 </p>
+<h4>¿Que es un objeto?</h4>
+<p>
+Se dice que cada objeto es una instancia de su clase. Toda instancia de la clase posee su propio valor para cada uno de los atributos pero comparte los nombres de los atributos y las operaciones con las demás instancias de la clase. Los objetos de un sistema se comunican entre sí mediante mensajes. Todo objeto contiene una referencia implícita a su propia clase.
+</p>
+
+
 <h4>Clase</h4>
 <p>
 Una clase contienen el molde (estructura, esquema) a partir del cual se crean los objetos que pertenecen a ella y el código que debe ejecutarse cada vez que un objeto de la clase recibe un mensaje. Una clase contiene la  descripción de las características comunes de todos los objetos que pertenecen a ella: la especificación del comportamiento, la definición de la estructura interna y la implementación de los métodos.
-</p>
-<h4>Instancia</h4>
-<p>
-Se dice que cada objeto es una instancia de su clase. Toda instancia de la clase posee su propio valor para cada uno de los atributos pero comparte los nombres de los atributos y las operaciones con las demás instancias de la clase. Los objetos de un sistema se comunican entre sí mediante mensajes. Todo objeto contiene una referencia implícita a su propia clase.
 </p>
